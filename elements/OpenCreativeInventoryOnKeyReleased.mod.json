@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"entity_checkgamemode\"><field name=\"gamemode\">CREATIVE</field><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value><statement name=\"DO0\"><block type=\"java_code\"><field name=\"CODE\">if (entity.level().isClientSide()) {&amp;#10;    net.mcreator.thickskull.client.ThickskullClientScreens.openVanillaInventory(true);&amp;#10;}</field></block></statement></block></next></block><block type=\"call_procedure\" x=\"-357\" y=\"289\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"procedure\"></field></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

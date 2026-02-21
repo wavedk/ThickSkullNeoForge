@@ -1,0 +1,876 @@
+{
+  "mod_elements": [
+    {
+      "name": "Draggingcorpse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "draggingcorpse",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/DraggingcorpseProcedure.java"
+        ]
+      },
+      "path": "~/Main/Entities/EntityProcedures"
+    },
+    {
+      "name": "UpdateMaxHealth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "update_max_health",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/UpdateMaxHealthProcedure.java"
+        ]
+      },
+      "path": "~/Main/Entities/EntityProcedures"
+    },
+    {
+      "name": "CowcorpsePlaydragstaystill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cowcorpse_playdragstaystill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/CowcorpsePlaydragstaystillProcedure.java"
+        ]
+      },
+      "path": "~/Main/Entities/EntityProcedures"
+    },
+    {
+      "name": "ForceOneSlot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_one_slot",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/ForceOneSlotProcedure.java"
+        ]
+      },
+      "path": "~/Main/Procedures/Inventory"
+    },
+    {
+      "name": "CanMoveBehaviour",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "can_move_behaviour",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/CanMoveBehaviourProcedure.java"
+        ]
+      },
+      "path": "~/Main/Procedures"
+    },
+    {
+      "name": "MainConfig",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/configuration/MainConfigConfiguration.java"
+        ]
+      },
+      "path": "~/Main"
+    },
+    {
+      "name": "TrippingMechanic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tripping_mechanic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/TrippingMechanicProcedure.java"
+        ]
+      },
+      "path": "~/Main/Procedures"
+    },
+    {
+      "name": "CustomInventoryThisGUIIsClosed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_inventory_this_gui_is_closed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/CustomInventoryThisGUIIsClosedProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI"
+    },
+    {
+      "name": "OpenInventoryOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_inventory_on_key_released",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/OpenInventoryOnKeyReleasedProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI"
+    },
+    {
+      "name": "CustomInventory",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_inventory",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/world/inventory/CustomInventoryMenu.java",
+          "src/main/java/net/mcreator/thickskull/client/gui/CustomInventoryScreen.java"
+        ]
+      },
+      "path": "~/Main/GUI"
+    },
+    {
+      "name": "ForceOneSlotHotbar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_one_slot_hotbar",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/ForceOneSlotHotbarProcedure.java"
+        ],
+        "return_type": "string"
+      },
+      "path": "~/Main/Procedures/Inventory"
+    },
+    {
+      "name": "ForceOneSlotHotbar2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "force_one_slot_hotbar_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/ForceOneSlotHotbar2Procedure.java"
+        ],
+        "return_type": "string"
+      },
+      "path": "~/Main/Procedures/Inventory"
+    },
+    {
+      "name": "CancelPickupFullInventory",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cancel_pickup_full_inventory",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/CancelPickupFullInventoryProcedure.java"
+        ]
+      },
+      "path": "~/Main/Procedures/Inventory"
+    },
+    {
+      "name": "PickupMechanic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pickup_mechanic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/PickupMechanicProcedure.java"
+        ]
+      },
+      "path": "~/Main/Procedures/Inventory"
+    },
+    {
+      "name": "RightClickPickup",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "right_click_pickup",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/RightClickPickupProcedure.java"
+        ]
+      },
+      "path": "~/Main/Procedures/Inventory"
+    },
+    {
+      "name": "RightClickPickupOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "right_click_pickup_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/RightClickPickupOnBlockProcedure.java"
+        ]
+      },
+      "path": "~/Main/Procedures/Inventory"
+    },
+    {
+      "name": "TemperateCowCorpse",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "temperate_cow_corpse",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/thickskullneoforge/models/item/temperate_cow_corpse_spawn_egg.json",
+          "src/main/resources/assets/thickskullneoforge/items/temperate_cow_corpse_spawn_egg.json",
+          "src/main/java/net/mcreator/thickskull/entity/TemperateCowCorpseEntity.java",
+          "src/main/java/net/mcreator/thickskull/client/renderer/TemperateCowCorpseRenderer.java"
+        ]
+      },
+      "path": "~/Main/Entities"
+    },
+    {
+      "name": "Cowdiesplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cowdiesplay",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/CowdiesplayProcedure.java"
+        ]
+      },
+      "path": "~/Main/Entities/EntityProcedures"
+    },
+    {
+      "name": "TestCowdie",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_cowdie",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/TestCowdieProcedure.java"
+        ]
+      },
+      "path": "~/Main/Entities/EntityProcedures"
+    },
+    {
+      "name": "Awd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awd",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/AwdProcedure.java"
+        ]
+      },
+      "path": "~/Main"
+    },
+    {
+      "name": "CancelTransferSLot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cancel_transfer_s_lot",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/CancelTransferSLotProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI"
+    },
+    {
+      "name": "HotbarSlotOne",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hotbar_slot_one",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/client/screens/HotbarSlotOneOverlay.java"
+        ]
+      },
+      "path": "~/Main/GUI/Hotbar"
+    },
+    {
+      "name": "CustomInventoryWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_inventory_while_this_gui_is_open_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/CustomInventoryWhileThisGUIIsOpenTickProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI"
+    },
+    {
+      "name": "OpenInventoryMessage",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "open_inventory_message",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/OpenInventoryMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "ThickskullneoforgeModKeyMappingsExtra",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "thickskullneoforge_mod_key_mappings_extra",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/ThickskullneoforgeModKeyMappingsExtra.java"
+        ]
+      }
+    },
+    {
+      "name": "CustomInventoryThisGUIIsOpened",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_inventory_this_gui_is_opened",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/CustomInventoryThisGUIIsOpenedProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI"
+    },
+    {
+      "name": "OpenCreativeInventory",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_creative_inventory",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/network/OpenCreativeInventoryMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenCreativeInventoryOnKeyReleased",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_creative_inventory_on_key_released",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/OpenCreativeInventoryOnKeyReleasedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cancel_Damage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cancel_damage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/Cancel_DamageProcedure.java"
+        ]
+      },
+      "path": "~/Main/Entities"
+    },
+    {
+      "name": "UnbindHotbarKeys",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "unbind_hotbar_keys",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/mixin/UnbindHotbarKeysMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "HideHotbarKeybinds",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hide_hotbar_keybinds",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/mixin/HideHotbarKeybindsMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "KeyBindsListKeyEntryAccessor",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "key_binds_list_key_entry_accessor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/thickskull/mixin/KeyBindsListKeyEntryAccessorMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "ReturnPlayerModelForInventory",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_player_model_for_inventory",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/ReturnPlayerModelForInventoryProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "max_health",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "6.0"
+    },
+    {
+      "name": "max_health_tick_timer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "tripping_timer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "sinceTripped",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "tripped_z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "tripped_y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "tripped_x",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "canMoveAfterTripped",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "true"
+    },
+    {
+      "name": "customInventorySlot9",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "hotbarItem",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "inventoryCloseTickTimer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "customInventorySlot2",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "customInventorySlot1",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "customInventorySlot4",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "customInventorySlot3",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "customInventorySlot6",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "customInventorySlot5",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "customInventorySlot8",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "customInventorySlot7",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.thickskullneoforge.check_health": "Check Health",
+      "thickskullneoforge.configuration.tripping.timer.min": "tripping.timer.min",
+      "thickskullneoforge.configuration.tripping.timer.max": "tripping.timer.max",
+      "thickskullneoforge.configuration.timer.min": "timer.min",
+      "thickskullneoforge.configuration.inventory": "Inventory",
+      "thickskullneoforge.configuration.tripping": "Tripping",
+      "thickskullneoforge.configuration.enabled": "enabled",
+      "thickskullneoforge.configuration.timer.max": "timer.max",
+      "thickskullneoforge.configuration.force_one_slot": "forceOneSlot",
+      "key.categories.thickskull": "Thick Skull",
+      "key.thickskullneoforge.open_inventory": "Open Inventory",
+      "item.thickskullneoforge.temperate_cow_corpse_spawn_egg": "Temperate Cow Corpse Spawn Egg",
+      "entity.thickskullneoforge.temperate_cow_corpse": "Temperate Cow Corpse",
+      "thickskullneoforge.configuration.force_right_click_pickup": "forceRightClickPickup",
+      "key.thickskullneoforge.open_creative_inventory": "Open Creative Inventory",
+      "gui.thickskullneoforge.custom_inventory.label_your_inventory": "Your Inventory"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModConfigs.java",
+      "src/main/java/net/mcreator/thickskull/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModMenus.java",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModScreens.java",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModKeyMappings.java",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModItems.java",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModEntities.java",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModEntityRenderers.java",
+      "src/main/resources/thickskullneoforge.mixins.json",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModRenderStateModifiers.java",
+      "src/main/java/net/mcreator/thickskull/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModModels.java",
+      "src/main/java/net/mcreator/thickskull/mixin/ItemInHandRendererMixin.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/thickskull/client/RenderUtils.java",
+      "src/main/java/net/mcreator/thickskull/mixin/PlayerAnimationRendererMixin.java",
+      "src/main/java/net/mcreator/thickskull/ThickskullneoforgeModPlayerAnimationAPI.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModTabs.java",
+      "src/main/java/net/mcreator/thickskull/mixin/CameraAccessor.java",
+      "src/main/java/net/mcreator/thickskull/network/ThickskullneoforgeModVariables.java",
+      "src/main/java/net/mcreator/thickskull/ThickskullneoforgeMod.java",
+      "src/main/java/net/mcreator/thickskull/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/thickskull/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/thickskull/client/ItemArms.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/thickskull/mixin/LevelRendererMixin.java",
+      "src/main/java/net/mcreator/thickskull/network/PlayPlayerAnimationMessage.java",
+      "src/main/java/net/mcreator/thickskull/mixin/PlayerAnimationMixin.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Main",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": [
+              {
+                "name": "Inventory",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Items",
+            "children": []
+          },
+          {
+            "name": "GUI",
+            "children": [
+              {
+                "name": "Hotbar",
+                "children": []
+              },
+              {
+                "name": "GUIProcedures",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Blocks",
+            "children": []
+          },
+          {
+            "name": "Entities",
+            "children": [
+              {
+                "name": "EntityProcedures",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "thickskullneoforge",
+    "modName": "ThickSkullNeoForge",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.8",
+    "modElementsPackage": "net.mcreator.thickskull"
+  },
+  "mcreatorVersion": 202500345720
+}

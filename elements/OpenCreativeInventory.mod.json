@@ -1,0 +1,12 @@
+{
+  "_fv": 79,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Open Creative Inventory",
+    "keyBindingCategoryKey": "creative",
+    "onKeyReleased": {
+      "name": "OpenCreativeInventoryOnKeyReleased"
+    }
+  }
+}

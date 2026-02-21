@@ -1,0 +1,18 @@
+{
+  "item.thickskullneoforge.check_health": "Check Health",
+  "thickskullneoforge.configuration.tripping.timer.min": "tripping.timer.min",
+  "thickskullneoforge.configuration.tripping.timer.max": "tripping.timer.max",
+  "thickskullneoforge.configuration.timer.min": "timer.min",
+  "thickskullneoforge.configuration.inventory": "Inventory",
+  "thickskullneoforge.configuration.tripping": "Tripping",
+  "thickskullneoforge.configuration.enabled": "enabled",
+  "thickskullneoforge.configuration.timer.max": "timer.max",
+  "thickskullneoforge.configuration.force_one_slot": "forceOneSlot",
+  "key.categories.thickskull": "Thick Skull",
+  "key.thickskullneoforge.open_inventory": "Open Inventory",
+  "item.thickskullneoforge.temperate_cow_corpse_spawn_egg": "Temperate Cow Corpse Spawn Egg",
+  "entity.thickskullneoforge.temperate_cow_corpse": "Temperate Cow Corpse",
+  "thickskullneoforge.configuration.force_right_click_pickup": "forceRightClickPickup",
+  "key.thickskullneoforge.open_creative_inventory": "Open Creative Inventory",
+  "gui.thickskullneoforge.custom_inventory.label_your_inventory": "Your Inventory"
+}
