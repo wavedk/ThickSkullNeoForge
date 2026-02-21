@@ -156,7 +156,7 @@
           "src/main/java/net/mcreator/thickskull/procedures/CustomInventoryThisGUIIsClosedProcedure.java"
         ]
       },
-      "path": "~/Main/GUI"
+      "path": "~/Main/GUI/CustomInventory/Procedures"
     },
     {
       "name": "OpenInventoryOnKeyReleased",
@@ -191,7 +191,7 @@
           "src/main/java/net/mcreator/thickskull/procedures/OpenInventoryOnKeyReleasedProcedure.java"
         ]
       },
-      "path": "~/Main/GUI"
+      "path": "~/Main/GUI/CustomInventory/Procedures"
     },
     {
       "name": "CustomInventory",
@@ -205,7 +205,7 @@
           "src/main/java/net/mcreator/thickskull/client/gui/CustomInventoryScreen.java"
         ]
       },
-      "path": "~/Main/GUI"
+      "path": "~/Main/GUI/CustomInventory"
     },
     {
       "name": "ForceOneSlotHotbar",
@@ -422,25 +422,6 @@
       "path": "~/Main/Entities/EntityProcedures"
     },
     {
-      "name": "Awd",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "awd",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/thickskull/procedures/AwdProcedure.java"
-        ]
-      },
-      "path": "~/Main"
-    },
-    {
       "name": "CancelTransferSLot",
       "type": "procedure",
       "compiles": true,
@@ -453,7 +434,7 @@
           "src/main/java/net/mcreator/thickskull/procedures/CancelTransferSLotProcedure.java"
         ]
       },
-      "path": "~/Main/GUI"
+      "path": "~/Main/GUI/CustomInventory/Procedures"
     },
     {
       "name": "HotbarSlotOne",
@@ -485,7 +466,7 @@
           "src/main/java/net/mcreator/thickskull/procedures/CustomInventoryWhileThisGUIIsOpenTickProcedure.java"
         ]
       },
-      "path": "~/Main/GUI"
+      "path": "~/Main/GUI/CustomInventory/Procedures"
     },
     {
       "name": "OpenInventoryMessage",
@@ -497,7 +478,8 @@
         "files": [
           "src/main/java/net/mcreator/thickskull/OpenInventoryMessage.java"
         ]
-      }
+      },
+      "path": "~/Main/GUI/CustomInventory/CustomElements"
     },
     {
       "name": "ThickskullneoforgeModKeyMappingsExtra",
@@ -509,7 +491,8 @@
         "files": [
           "src/main/java/net/mcreator/thickskull/ThickskullneoforgeModKeyMappingsExtra.java"
         ]
-      }
+      },
+      "path": "~/Main/GUI/CustomInventory/CustomElements"
     },
     {
       "name": "CustomInventoryThisGUIIsOpened",
@@ -528,7 +511,7 @@
           "src/main/java/net/mcreator/thickskull/procedures/CustomInventoryThisGUIIsOpenedProcedure.java"
         ]
       },
-      "path": "~/Main/GUI"
+      "path": "~/Main/GUI/CustomInventory/Procedures"
     },
     {
       "name": "OpenCreativeInventory",
@@ -540,7 +523,8 @@
         "files": [
           "src/main/java/net/mcreator/thickskull/network/OpenCreativeInventoryMessage.java"
         ]
-      }
+      },
+      "path": "~/Main/GUI/Keybinds"
     },
     {
       "name": "OpenCreativeInventoryOnKeyReleased",
@@ -558,7 +542,8 @@
         "files": [
           "src/main/java/net/mcreator/thickskull/procedures/OpenCreativeInventoryOnKeyReleasedProcedure.java"
         ]
-      }
+      },
+      "path": "~/Main/GUI/GUIProcedures"
     },
     {
       "name": "Cancel_Damage",
@@ -589,7 +574,8 @@
         "files": [
           "src/main/java/net/mcreator/thickskull/mixin/UnbindHotbarKeysMixin.java"
         ]
-      }
+      },
+      "path": "~/Main/GUI/CustomInventory/CustomElements/Mixins"
     },
     {
       "name": "HideHotbarKeybinds",
@@ -601,7 +587,8 @@
         "files": [
           "src/main/java/net/mcreator/thickskull/mixin/HideHotbarKeybindsMixin.java"
         ]
-      }
+      },
+      "path": "~/Main/GUI/CustomInventory/CustomElements/Mixins"
     },
     {
       "name": "KeyBindsListKeyEntryAccessor",
@@ -613,7 +600,8 @@
         "files": [
           "src/main/java/net/mcreator/thickskull/mixin/KeyBindsListKeyEntryAccessorMixin.java"
         ]
-      }
+      },
+      "path": "~/Main/GUI/CustomInventory/CustomElements/Mixins"
     },
     {
       "name": "ReturnPlayerModelForInventory",
@@ -633,7 +621,62 @@
           "src/main/java/net/mcreator/thickskull/procedures/ReturnPlayerModelForInventoryProcedure.java"
         ]
       },
-      "path": "~/Main/GUI"
+      "path": "~/Main/GUI/CustomInventory/Procedures"
+    },
+    {
+      "name": "DropItemsIfNotInCustomInventory",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drop_items_if_not_in_custom_inventory",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/DropItemsIfNotInCustomInventoryProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI/GUIProcedures"
+    },
+    {
+      "name": "GeneralPlayerTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "general_player_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/GeneralPlayerTickProcedure.java"
+        ]
+      },
+      "path": "~/Main/Procedures"
     }
   ],
   "variable_elements": [
@@ -778,34 +821,34 @@
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModConfigs.java",
-      "src/main/java/net/mcreator/thickskull/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModMenus.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModScreens.java",
+      "src/main/java/net/mcreator/thickskull/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModKeyMappings.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModItems.java",
-      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModEntities.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModEntityRenderers.java",
-      "src/main/resources/thickskullneoforge.mixins.json",
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModEntities.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/thickskull/mixin/ItemInHandLayerMixin.java",
+      "src/main/java/net/mcreator/thickskull/mixin/PlayerAnimationMixin.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModRenderStateModifiers.java",
-      "src/main/java/net/mcreator/thickskull/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModModels.java",
-      "src/main/java/net/mcreator/thickskull/mixin/ItemInHandRendererMixin.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/thickskull/client/RenderUtils.java",
-      "src/main/java/net/mcreator/thickskull/mixin/PlayerAnimationRendererMixin.java",
       "src/main/java/net/mcreator/thickskull/ThickskullneoforgeModPlayerAnimationAPI.java",
+      "src/main/java/net/mcreator/thickskull/mixin/LevelRendererMixin.java",
+      "src/main/java/net/mcreator/thickskull/network/ThickskullneoforgeModVariables.java",
+      "src/main/java/net/mcreator/thickskull/mixin/CameraAccessor.java",
+      "src/main/resources/pack.mcmeta",
       "src/main/resources/META-INF/accesstransformer.cfg",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModTabs.java",
-      "src/main/java/net/mcreator/thickskull/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/thickskull/network/ThickskullneoforgeModVariables.java",
+      "src/main/java/net/mcreator/thickskull/mixin/EntityRenderDispatcherMixin.java",
+      "src/main/resources/thickskullneoforge.mixins.json",
       "src/main/java/net/mcreator/thickskull/ThickskullneoforgeMod.java",
-      "src/main/java/net/mcreator/thickskull/mixin/ItemInHandLayerMixin.java",
-      "src/main/java/net/mcreator/thickskull/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/thickskull/client/ItemArms.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/net/mcreator/thickskull/mixin/LevelRendererMixin.java",
       "src/main/java/net/mcreator/thickskull/network/PlayPlayerAnimationMessage.java",
-      "src/main/java/net/mcreator/thickskull/mixin/PlayerAnimationMixin.java"
+      "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModModels.java",
+      "src/main/java/net/mcreator/thickskull/mixin/LivingEntityRendererMixin.java",
+      "src/main/java/net/mcreator/thickskull/mixin/ItemInHandRendererMixin.java",
+      "src/main/java/net/mcreator/thickskull/client/RenderUtils.java",
+      "src/main/java/net/mcreator/thickskull/client/ItemArms.java",
+      "src/main/java/net/mcreator/thickskull/mixin/PlayerAnimationRendererMixin.java"
     ]
   },
   "foldersRoot": {
@@ -836,6 +879,28 @@
               },
               {
                 "name": "GUIProcedures",
+                "children": []
+              },
+              {
+                "name": "CustomInventory",
+                "children": [
+                  {
+                    "name": "Procedures",
+                    "children": []
+                  },
+                  {
+                    "name": "CustomElements",
+                    "children": [
+                      {
+                        "name": "Mixins",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Keybinds",
                 "children": []
               }
             ]

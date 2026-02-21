@@ -31,7 +31,7 @@ public class OpenInventoryOnKeyReleasedProcedure {
 			if (("" + Minecraft.getInstance().screen).equals("null")) {
 				{
 					ThickskullneoforgeModVariables.PlayerVariables _vars = entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES);
-					_vars.inventoryCloseTickTimer = 4;
+					_vars.inventoryCloseTickTimer = 8;
 					_vars.markSyncDirty();
 				}
 				if (entity instanceof ServerPlayer _ent) {

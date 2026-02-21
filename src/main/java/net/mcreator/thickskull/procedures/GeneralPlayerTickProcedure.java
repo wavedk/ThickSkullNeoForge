@@ -1,10 +1,5 @@
 package net.mcreator.thickskull.procedures;
 
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.Event;
-
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
@@ -14,20 +9,8 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.thickskull.network.ThickskullneoforgeModVariables;
 
-import javax.annotation.Nullable;
-
-@EventBusSubscriber
-public class AwdProcedure {
-	@SubscribeEvent
-	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		execute(event, event.getEntity());
-	}
-
+public class GeneralPlayerTickProcedure {
 	public static void execute(Entity entity) {
-		execute(null, entity);
-	}
-
-	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
 		if ((getEntityGameType(entity) == GameType.SURVIVAL || getEntityGameType(entity) == GameType.ADVENTURE) && ("" + Minecraft.getInstance().screen).contains("net.minecraft.client.gui.screens.inventory")) {
