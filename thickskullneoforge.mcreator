@@ -189,7 +189,8 @@
         ],
         "files": [
           "src/main/java/net/mcreator/thickskull/procedures/OpenInventoryOnKeyReleasedProcedure.java"
-        ]
+        ],
+        "return_type": "logic"
       },
       "path": "~/Main/GUI/CustomInventory/Procedures"
     },
@@ -201,8 +202,8 @@
       "registry_name": "custom_inventory",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/thickskull/world/inventory/CustomInventoryMenu.java",
-          "src/main/java/net/mcreator/thickskull/client/gui/CustomInventoryScreen.java"
+          "src/main/java/net/mcreator/thickskull/client/gui/CustomInventoryScreen.java",
+          "src/main/java/net/mcreator/thickskull/world/inventory/CustomInventoryMenu.java"
         ]
       },
       "path": "~/Main/GUI/CustomInventory"
@@ -358,9 +359,9 @@
       "registry_name": "temperate_cow_corpse",
       "metadata": {
         "files": [
-          "src/main/resources/assets/thickskullneoforge/models/item/temperate_cow_corpse_spawn_egg.json",
-          "src/main/resources/assets/thickskullneoforge/items/temperate_cow_corpse_spawn_egg.json",
           "src/main/java/net/mcreator/thickskull/entity/TemperateCowCorpseEntity.java",
+          "src/main/resources/assets/thickskullneoforge/items/temperate_cow_corpse_spawn_egg.json",
+          "src/main/resources/assets/thickskullneoforge/models/item/temperate_cow_corpse_spawn_egg.json",
           "src/main/java/net/mcreator/thickskull/client/renderer/TemperateCowCorpseRenderer.java"
         ]
       },
@@ -670,6 +671,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -844,6 +861,24 @@
       "type": "itemstack",
       "scope": "player_persistent",
       "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "pressInventoryTimer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "justOpenedInventory",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "justClosedInventory",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -876,6 +911,7 @@
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModMenus.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModScreens.java",
       "src/main/java/net/mcreator/thickskull/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/thickskull/client/renderer/item/LegacyOverrideSelectItemModel.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModKeyMappings.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModItems.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModEntityRenderers.java",

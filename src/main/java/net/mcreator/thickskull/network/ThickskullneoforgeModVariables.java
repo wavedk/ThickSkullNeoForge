@@ -101,6 +101,9 @@ public class ThickskullneoforgeModVariables {
 		clone.customInventorySlot5 = original.customInventorySlot5;
 		clone.customInventorySlot8 = original.customInventorySlot8;
 		clone.customInventorySlot7 = original.customInventorySlot7;
+		clone.pressInventoryTimer = original.pressInventoryTimer;
+		clone.justOpenedInventory = original.justOpenedInventory;
+		clone.justClosedInventory = original.justClosedInventory;
 		if (!event.isWasDeath()) {
 			clone.canMoveAfterTripped = original.canMoveAfterTripped;
 		}
@@ -128,6 +131,9 @@ public class ThickskullneoforgeModVariables {
 		public ItemStack customInventorySlot5 = ItemStack.EMPTY;
 		public ItemStack customInventorySlot8 = ItemStack.EMPTY;
 		public ItemStack customInventorySlot7 = ItemStack.EMPTY;
+		public double pressInventoryTimer = 0;
+		public boolean justOpenedInventory = false;
+		public boolean justClosedInventory = false;
 
 		@Override
 		public void serialize(ValueOutput output) {
@@ -150,6 +156,9 @@ public class ThickskullneoforgeModVariables {
 			output.store("customInventorySlot5", ItemStack.OPTIONAL_CODEC, customInventorySlot5);
 			output.store("customInventorySlot8", ItemStack.OPTIONAL_CODEC, customInventorySlot8);
 			output.store("customInventorySlot7", ItemStack.OPTIONAL_CODEC, customInventorySlot7);
+			output.putDouble("pressInventoryTimer", pressInventoryTimer);
+			output.putBoolean("justOpenedInventory", justOpenedInventory);
+			output.putBoolean("justClosedInventory", justClosedInventory);
 		}
 
 		@Override
@@ -173,6 +182,9 @@ public class ThickskullneoforgeModVariables {
 			customInventorySlot5 = input.read("customInventorySlot5", ItemStack.OPTIONAL_CODEC).orElse(ItemStack.EMPTY);
 			customInventorySlot8 = input.read("customInventorySlot8", ItemStack.OPTIONAL_CODEC).orElse(ItemStack.EMPTY);
 			customInventorySlot7 = input.read("customInventorySlot7", ItemStack.OPTIONAL_CODEC).orElse(ItemStack.EMPTY);
+			pressInventoryTimer = input.getDoubleOr("pressInventoryTimer", 0);
+			justOpenedInventory = input.getBooleanOr("justOpenedInventory", false);
+			justClosedInventory = input.getBooleanOr("justClosedInventory", false);
 		}
 
 		public void markSyncDirty() {

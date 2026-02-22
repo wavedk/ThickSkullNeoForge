@@ -10,7 +10,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.thickskull.world.inventory.CustomInventoryMenu;
 import net.mcreator.thickskull.network.ThickskullneoforgeModVariables;
@@ -18,20 +17,33 @@ import net.mcreator.thickskull.network.ThickskullneoforgeModVariables;
 import io.netty.buffer.Unpooled;
 
 public class OpenInventoryOnKeyReleasedProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static boolean execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
-			return;
+			return false;
 		boolean isGUIOpen = false;
 		if ((entity instanceof Player _plr0 && _plr0.containerMenu instanceof CustomInventoryMenu) == true) {
-			if (entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).inventoryCloseTickTimer < 1) {
-				if (entity instanceof Player _player)
-					_player.closeContainer();
+			if (!entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).justOpenedInventory) {
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal((entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).inventoryCloseTickTimer + "/" + entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).pressInventoryTimer)),
+							false);
+				if (entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).inventoryCloseTickTimer < 1 && entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).pressInventoryTimer < 1) {
+					if (entity instanceof Player _player)
+						_player.closeContainer();
+					{
+						ThickskullneoforgeModVariables.PlayerVariables _vars = entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES);
+						_vars.justClosedInventory = true;
+						_vars.markSyncDirty();
+					}
+					return true;
+				}
 			}
 		} else {
-			if (("" + Minecraft.getInstance().screen).equals("null")) {
+			if (entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).inventoryCloseTickTimer < 1) {
 				{
 					ThickskullneoforgeModVariables.PlayerVariables _vars = entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES);
-					_vars.inventoryCloseTickTimer = 20;
+					_vars.justOpenedInventory = true;
+					_vars.inventoryCloseTickTimer = 8;
+					_vars.pressInventoryTimer = 0;
 					_vars.markSyncDirty();
 				}
 				if (entity instanceof ServerPlayer _ent) {
@@ -53,7 +65,14 @@ public class OpenInventoryOnKeyReleasedProcedure {
 						}
 					}, _bpos);
 				}
+				return true;
 			}
 		}
+		{
+			ThickskullneoforgeModVariables.PlayerVariables _vars = entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES);
+			_vars.justOpenedInventory = false;
+			_vars.markSyncDirty();
+		}
+		return true;
 	}
 }

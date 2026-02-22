@@ -25,7 +25,7 @@
             "name": "CancelTransferSLot"
           },
           "dropItemsWhenNotBound": false,
-          "x": 208,
+          "x": 205,
           "y": 178,
           "locked": false
         }
@@ -206,7 +206,7 @@
         "data": {
           "name": "label_your_inventory",
           "text": {
-            "fixedValue": "Your Inventory2"
+            "fixedValue": "Your Inventory"
           },
           "color": {
             "value": -12829636,

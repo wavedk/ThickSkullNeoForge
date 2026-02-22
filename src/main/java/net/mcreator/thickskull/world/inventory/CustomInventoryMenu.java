@@ -98,7 +98,7 @@ public class CustomInventoryMenu extends AbstractContainerMenu implements Thicks
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 83, 142) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 80, 142) {
 			private final int slot = 0;
 			private int x = CustomInventoryMenu.this.x;
 			private int y = CustomInventoryMenu.this.y;

@@ -8,6 +8,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
@@ -16,6 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.thickskull.world.inventory.CustomInventoryMenu;
 import net.mcreator.thickskull.network.ThickskullneoforgeModVariables;
 
 import javax.annotation.Nullable;
@@ -24,14 +26,14 @@ import javax.annotation.Nullable;
 public class GeneralPlayerTickProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		execute(event, event.getEntity());
+		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		boolean keyPressed = false;
@@ -88,7 +90,30 @@ public class GeneralPlayerTickProcedure {
 		}
 		keyPressed = pressed;
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal("Message"), false);
+			_player.displayClientMessage(Component.literal((entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).inventoryCloseTickTimer + "/" + entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).pressInventoryTimer)), false);
+		if (keyPressed) {
+			if (!entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).justClosedInventory) {
+				if (8 > entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).pressInventoryTimer) {
+					{
+						ThickskullneoforgeModVariables.PlayerVariables _vars = entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES);
+						_vars.pressInventoryTimer = entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES).pressInventoryTimer + 1;
+						_vars.markSyncDirty();
+					}
+				} else {
+					if (!(entity instanceof Player _plr1 && _plr1.containerMenu instanceof CustomInventoryMenu)) {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal("0"), false);
+						OpenInventoryOnKeyReleasedProcedure.execute(world, x, y, z, entity);
+					}
+				}
+			}
+		} else {
+			{
+				ThickskullneoforgeModVariables.PlayerVariables _vars = entity.getData(ThickskullneoforgeModVariables.PLAYER_VARIABLES);
+				_vars.pressInventoryTimer = 0;
+				_vars.markSyncDirty();
+			}
+		}
 		if ((getEntityGameType(entity) == GameType.SURVIVAL || getEntityGameType(entity) == GameType.ADVENTURE) && ("" + Minecraft.getInstance().screen).contains("net.minecraft.client.gui.screens.inventory")) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();

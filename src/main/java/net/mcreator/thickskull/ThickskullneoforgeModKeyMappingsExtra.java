@@ -33,9 +33,9 @@ public class ThickskullneoforgeModKeyMappingsExtra {
 			} else if (isDownOld != isDown && !isDown) {
 
 				if (Minecraft.getInstance().player != null) {
-					int dt = (int) (System.currentTimeMillis() - OPEN_INVENTORY_LASTPRESS);
-					ClientPacketDistributor.sendToServer(new OpenInventoryMessage(1, dt));
-					OpenInventoryMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+					int dt = (int) (System.currentTimeMillis() - OPEN_INVENTORY_GUI_LASTPRESS);
+					ClientPacketDistributor.sendToServer(new OpenInventoryMessage(0, dt));
+					OpenInventoryMessage.pressAction(Minecraft.getInstance().player, 0, dt);
 				}
 			}
 			isDownOld = isDown;
@@ -75,6 +75,9 @@ public class ThickskullneoforgeModKeyMappingsExtra {
 			if (input.equals(OPEN_INVENTORY.getKey()) && !OPEN_INVENTORY_GUI_DOWN) {
 				OPEN_INVENTORY_GUI_DOWN = true;
 				OPEN_INVENTORY_GUI_LASTPRESS = System.currentTimeMillis();
+				int dt = (int) (System.currentTimeMillis() - OPEN_INVENTORY_GUI_LASTPRESS);
+				ClientPacketDistributor.sendToServer(new OpenInventoryMessage(1, dt));
+				OpenInventoryMessage.pressAction(Minecraft.getInstance().player, 1, dt);
 			}
 		}
 
@@ -90,9 +93,6 @@ public class ThickskullneoforgeModKeyMappingsExtra {
 			if (input.equals(OPEN_INVENTORY.getKey()) && OPEN_INVENTORY_GUI_DOWN) {
 				OPEN_INVENTORY_GUI_DOWN = false;
 
-				int dt = (int) (System.currentTimeMillis() - OPEN_INVENTORY_GUI_LASTPRESS);
-				ClientPacketDistributor.sendToServer(new OpenInventoryMessage(1, dt));
-				OpenInventoryMessage.pressAction(Minecraft.getInstance().player, 1, dt);
 			}
 		}
 	}
