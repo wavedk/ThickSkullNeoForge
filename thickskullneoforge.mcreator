@@ -201,8 +201,8 @@
       "registry_name": "custom_inventory",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/thickskull/world/inventory/CustomInventoryMenu.java",
-          "src/main/java/net/mcreator/thickskull/client/gui/CustomInventoryScreen.java"
+          "src/main/java/net/mcreator/thickskull/client/gui/CustomInventoryScreen.java",
+          "src/main/java/net/mcreator/thickskull/world/inventory/CustomInventoryMenu.java"
         ]
       },
       "path": "~/Main/GUI/CustomInventory"
@@ -677,6 +677,25 @@
         ]
       },
       "path": "~/Main/Procedures"
+    },
+    {
+      "name": "OpenInventoryOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_inventory_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/OpenInventoryOnKeyPressedProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI/CustomInventory/CustomElements"
     }
   ],
   "variable_elements": [
@@ -815,7 +834,7 @@
       "entity.thickskullneoforge.temperate_cow_corpse": "Temperate Cow Corpse",
       "thickskullneoforge.configuration.force_right_click_pickup": "forceRightClickPickup",
       "key.thickskullneoforge.open_creative_inventory": "Open Creative Inventory",
-      "gui.thickskullneoforge.custom_inventory.label_your_inventory": "Your Inventory"
+      "gui.thickskullneoforge.custom_inventory.label_your_inventory": "Your Inventory2"
     }
   },
   "metadata": {

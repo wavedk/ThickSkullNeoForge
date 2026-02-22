@@ -15,6 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 
 import net.mcreator.thickskull.procedures.OpenInventoryOnKeyReleasedProcedure;
+import net.mcreator.thickskull.procedures.OpenInventoryOnKeyPressedProcedure;
 import net.mcreator.thickskull.ThickskullneoforgeMod;
 
 @EventBusSubscriber
@@ -52,6 +53,10 @@ public record OpenInventoryMessage(int eventType, int pressedms) implements Cust
 		if (type == 1) {
 
 			OpenInventoryOnKeyReleasedProcedure.execute(world, x, y, z, entity);
+		}
+		if (type == 0) {
+
+			OpenInventoryOnKeyPressedProcedure.execute(entity);
 		}
 	}
 
