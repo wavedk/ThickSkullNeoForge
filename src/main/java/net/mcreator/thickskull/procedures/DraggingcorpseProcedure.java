@@ -9,6 +9,7 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.Minecraft;
@@ -42,6 +43,8 @@ public class DraggingcorpseProcedure {
 		horizontalSpeed *= 20;
 		playerSpeed = horizontalSpeed;
 		if ((entity.getVehicle()) instanceof TemperateCowCorpseEntity) {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal(("" + playerSpeed)), false);
 			if (playerSpeed > 0) {
 				if (entity instanceof Player ? entity.getPersistentData().getStringOr("PlayerCurrentAnimation", "").equals("thickskullneoforge:dragstill") : false) {
 					if (entity instanceof Player) {

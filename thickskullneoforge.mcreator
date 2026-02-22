@@ -562,7 +562,7 @@
           "src/main/java/net/mcreator/thickskull/procedures/Cancel_DamageProcedure.java"
         ]
       },
-      "path": "~/Main/Entities/EntityProcedures"
+      "path": "~/Main/Entities"
     },
     {
       "name": "UnbindHotbarKeys",
@@ -709,6 +709,25 @@
         ]
       },
       "path": "~/Main/Items"
+    },
+    {
+      "name": "OpenInventoryOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_inventory_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/OpenInventoryOnKeyPressedProcedure.java"
+        ]
+      },
+      "path": "~/Main/GUI/CustomInventory/CustomElements"
     }
   ],
   "variable_elements": [
@@ -857,7 +876,6 @@
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModMenus.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModScreens.java",
       "src/main/java/net/mcreator/thickskull/network/MenuStateUpdateMessage.java",
-      "src/main/java/net/mcreator/thickskull/client/renderer/item/LegacyOverrideSelectItemModel.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModKeyMappings.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModItems.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModEntityRenderers.java",
@@ -901,15 +919,6 @@
             ]
           },
           {
-            "name": "Entities",
-            "children": [
-              {
-                "name": "EntityProcedures",
-                "children": []
-              }
-            ]
-          },
-          {
             "name": "Items",
             "children": []
           },
@@ -917,20 +926,8 @@
             "name": "GUI",
             "children": [
               {
-                "name": "Hotbar",
-                "children": []
-              },
-              {
-                "name": "GUIProcedures",
-                "children": []
-              },
-              {
                 "name": "CustomInventory",
                 "children": [
-                  {
-                    "name": "Procedures",
-                    "children": []
-                  },
                   {
                     "name": "CustomElements",
                     "children": [
@@ -939,8 +936,20 @@
                         "children": []
                       }
                     ]
+                  },
+                  {
+                    "name": "Procedures",
+                    "children": []
                   }
                 ]
+              },
+              {
+                "name": "Hotbar",
+                "children": []
+              },
+              {
+                "name": "GUIProcedures",
+                "children": []
               },
               {
                 "name": "Keybinds",
@@ -951,6 +960,15 @@
           {
             "name": "Blocks",
             "children": []
+          },
+          {
+            "name": "Entities",
+            "children": [
+              {
+                "name": "EntityProcedures",
+                "children": []
+              }
+            ]
           }
         ]
       }
