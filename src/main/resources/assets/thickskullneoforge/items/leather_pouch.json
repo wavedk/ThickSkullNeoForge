@@ -1,0 +1,39 @@
+{
+  "model": {
+    "type": "thickskullneoforge:legacy_overrides",
+    "overrides": [
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "thickskullneoforge:leather_pouch/open"
+            },
+            "value": 0
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "thickskullneoforge:item/leather_pouch_0"
+        }
+      },
+      {
+        "predicate": [
+          {
+            "property": {
+              "property": "thickskullneoforge:leather_pouch/open"
+            },
+            "value": 1
+          }
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "thickskullneoforge:item/leather_pouch_1"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "thickskullneoforge:item/leather_pouch"
+    }
+  }
+}

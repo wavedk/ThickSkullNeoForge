@@ -562,7 +562,7 @@
           "src/main/java/net/mcreator/thickskull/procedures/Cancel_DamageProcedure.java"
         ]
       },
-      "path": "~/Main/Entities"
+      "path": "~/Main/Entities/EntityProcedures"
     },
     {
       "name": "UnbindHotbarKeys",
@@ -677,6 +677,38 @@
         ]
       },
       "path": "~/Main/Procedures"
+    },
+    {
+      "name": "LeatherPouchPropertyValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leather_pouch_property_value_provider",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/thickskull/procedures/LeatherPouchPropertyValueProviderProcedure.java"
+        ]
+      },
+      "path": "~/Main/Items"
+    },
+    {
+      "name": "LeatherPouch",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leather_pouch",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/thickskullneoforge/models/item/leather_pouch_0.json",
+          "src/main/resources/assets/thickskullneoforge/models/item/leather_pouch.json",
+          "src/main/java/net/mcreator/thickskull/item/LeatherPouchItem.java",
+          "src/main/resources/assets/thickskullneoforge/items/leather_pouch.json",
+          "src/main/resources/assets/thickskullneoforge/models/item/leather_pouch_1.json"
+        ]
+      },
+      "path": "~/Main/Items"
     }
   ],
   "variable_elements": [
@@ -815,7 +847,8 @@
       "entity.thickskullneoforge.temperate_cow_corpse": "Temperate Cow Corpse",
       "thickskullneoforge.configuration.force_right_click_pickup": "forceRightClickPickup",
       "key.thickskullneoforge.open_creative_inventory": "Open Creative Inventory",
-      "gui.thickskullneoforge.custom_inventory.label_your_inventory": "Your Inventory"
+      "gui.thickskullneoforge.custom_inventory.label_your_inventory": "Your Inventory",
+      "item.thickskullneoforge.leather_pouch": "Leather Pouch"
     }
   },
   "metadata": {
@@ -824,6 +857,7 @@
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModMenus.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModScreens.java",
       "src/main/java/net/mcreator/thickskull/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/thickskull/client/renderer/item/LegacyOverrideSelectItemModel.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModKeyMappings.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModItems.java",
       "src/main/java/net/mcreator/thickskull/init/ThickskullneoforgeModEntityRenderers.java",
@@ -862,6 +896,15 @@
             "children": [
               {
                 "name": "Inventory",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Entities",
+            "children": [
+              {
+                "name": "EntityProcedures",
                 "children": []
               }
             ]
@@ -908,15 +951,6 @@
           {
             "name": "Blocks",
             "children": []
-          },
-          {
-            "name": "Entities",
-            "children": [
-              {
-                "name": "EntityProcedures",
-                "children": []
-              }
-            ]
           }
         ]
       }
